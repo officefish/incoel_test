@@ -1,20 +1,37 @@
-## 1.
+# Oat++ HTTP Server
+
+## 📌 Установка Oat++
+```sh
 git clone https://github.com/oatpp/oatpp
 cd oatpp
 mkdir build && cd build
 cmake ..
 make install
+```
 
-## 2.
+## 🚀 Компиляция сервера
+```sh
 g++ -std=c++17 -o server oatpp_web_server.cpp -I/usr/local/include -L/usr/local/lib -loatpp
+```
 
-## 3.
+## 🏃 Запуск сервера
+```sh
 ./server
+```
 
-## 4.
+## 📜 Проверка логов
+```sh
 curl http://localhost:1616/log
+```
 
-## 5.
+## 📤 Загрузка файла на сервер
+```sh
 curl -X POST -F "file=@myTestFile.txt" http://localhost:1616/upload
+```
 
+## 🔥 Доступ к Swagger UI
+Swagger UI доступен по адресу:
+```
+http://localhost:1616/swagger/ui
+```
 
